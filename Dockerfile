@@ -1,8 +1,10 @@
-FROM node:latest
+FROM ambientum/node:latest
 
-ADD . /web
+ADD . /var/www/app
 
-RUN cd /web && \
-    npm install
+RUN cd /var/www/app && \
+    yarn install
 
-CMD ["node", "/web/index.js"]
+WORKDIR "/var/www/app"
+
+CMD ["node", "index.js"]

@@ -9,9 +9,7 @@
   "dependencies": {
     "cep-promise": "^2.0.5",
     "cors": "^2.8.3",
-    "debug": "^2.6.8",
     "express": "^4.15.3",
-    "express-redis-cache": "^1.0.0",
-    "redis": "^2.7.1"
+    "express-cache-headers": "^0.1.3"
   }
 }

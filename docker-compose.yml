@@ -1,22 +1,11 @@
-version: 2
-
-volumes:
-  bajie-redis-data:
-    driver: local
+version: "2"
 
 services:
-  cache:
-    image: redis:3.2-alpine
-    container_name: bajie-redis
-    command: --appendonly yes
-    volumes:
-      - bajie-redis-data:/data
-
   bajie:
     image: sejakino/bajie:latest
     container_name: bajie-web
     environment:
-      - REDIS_HOST=cache
-      - REDIS_PORT=6379
-    links:
-      - cache
+      - "CACHE_TTL=604800"
+      - "HTTP_PORT=5466"
+    ports:
+      - "5466:5466"
