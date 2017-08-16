@@ -1,5 +1,8 @@
 # bajie
+
 Micro Serviço de Busca de CEP. **23 Linhas** de código, incluindo comentários :)
+
+Em produção na Kino [Contabilidade Online](https://sejakino.com.br/contabilidade-online)
 
 Basicamente, um proxy HTTP da biblioteca **[filipedeschamps/cep-promise](https://github.com/filipedeschamps/cep-promise)**.
 
